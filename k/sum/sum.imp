@@ -9,7 +9,7 @@ n = 100;
 sum = 0;
 while (!(n <= 0)) {
   sum = sum + n;
-  n = n + -1;
+  n = n + (-1);
 }
 
 // sum should be 5050 when n is 100
