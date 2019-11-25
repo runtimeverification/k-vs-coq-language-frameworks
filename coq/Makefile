@@ -1,3 +1,5 @@
+default: all
+
 all: Makefile.coq
 	+$(MAKE) -f Makefile.coq all
 
@@ -13,4 +15,4 @@ _CoqProject Makefile: ;
 %: Makefile.coq
 	+$(MAKE) -f Makefile.coq $@
 
-.PHONY: all clean
+.PHONY: default all clean

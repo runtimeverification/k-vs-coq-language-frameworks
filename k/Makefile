@@ -39,11 +39,13 @@ java_kompiled    := $(java_dir)/$(MAIN_DEFN_FILE)-kompiled/timestamp
 	build build-haskell build-java				\
 	run-sum run-sum-haskell run-sum-java			\
 	verify-sum verify-sum-haskell verify-sum-java		
-	
+
+default: verify-sum-java
+
+all: verify-sum-java
+
 clean:
 	rm -rf $(BUILD_DIR)
-
-default: all
 
 # Building
 # --------
