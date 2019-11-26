@@ -1,7 +1,7 @@
 
 ## Verification Example in Coq
 
-The example gives a specification of the language IMP, the program SUM and the correctness property in Coq. This example is an adaptation of the IMP example in [Program Verification by Coinduction](https://github.com/Formal-Systems-Laboratory/coinduction).
+The example gives a specification of the language IMP, the program SUM and the correctness property in [Coq](https://coq.inria.fr). This example is an adaptation of the IMP example in [Program Verification by Coinduction](https://github.com/Formal-Systems-Laboratory/coinduction).
 
 The specification files are as follows:
 
