@@ -1,7 +1,9 @@
 
 ## Verification Example in K
 
-The example gives a specification of the language IMP, the program SUM and the correctness property in the [K framework](http://www.kframework.org). This example is based on the IMP example of the [K Tutorial](https://github.com/kframework/k/tree/master/k-distribution/tutorial).
+The example gives a specification of the language IMP, the program SUM and the correctness
+property in the [K framework](http://www.kframework.org). This example is based on the IMP
+example of the [K Tutorial](https://github.com/kframework/k/tree/master/k-distribution/tutorial).
 
 The specification files are as follows:
 
@@ -37,5 +39,6 @@ make verify-sum
 
 ## Help and Feedback
 
-Feel free to report GitHub issues or to contact us at: [contact@runtimeverification.com](mailto:contact@runtimeverification.com).
+Feel free to report GitHub issues or to contact us at: 
+[contact@runtimeverification.com](mailto:contact@runtimeverification.com).
 
