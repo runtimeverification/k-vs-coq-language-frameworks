@@ -40,17 +40,18 @@ java_kompiled    := $(java_dir)/$(MAIN_DEFN_FILE)-kompiled/timestamp
 	run-sum run-sum-haskell run-sum-java			\
 	verify-sum verify-sum-haskell verify-sum-java		
 
-default: verify-sum-java
+default: all
 
 all: verify-sum-java
 
 clean:
-	rm -rf $(BUILD_DIR)
+	$(info K: Cleaning up ...)
+	@rm -rf $(BUILD_DIR)
 
 # Building
 # --------
 
-build: build-haskell build-java
+build: build-java
 build-haskell: $(haskell_kompiled)
 build-java:    $(java_kompiled)
 
@@ -66,7 +67,8 @@ $(haskell_kompiled): $(k_files)
 # Java Backend
 
 $(java_kompiled): $(java_files)
-	$(K_BIN)/kompile --debug --main-module $(MAIN_MODULE) --backend java              \
+	$(info K: Building IMP binaries using kompile...)
+	@$(K_BIN)/kompile --debug --main-module $(MAIN_MODULE) --backend java              \
                          --syntax-module $(SYNTAX_MODULE) $(MAIN_DEFN_FILE).k             \
                          --directory $(java_dir) -I $(java_dir)				  \
                          #--emit-json                                                      \
@@ -77,7 +79,7 @@ $(java_kompiled): $(java_files)
 SUM_DIR:=sum
 SUM_FILE:=$(SUM_DIR)/sum.imp
 
-run-sum: run-sum-haskell run-sum-java
+run-sum: run-sum-java
 
 # Haskell Backend
 
@@ -87,7 +89,8 @@ run-sum-haskell: $(SUM_FILE) $(haskell_kompiled)
 # Java Backend
 
 run-sum-java: $(SUM_FILE) $(java_kompiled)
-	$(K_BIN)/krun --directory $(java_dir) $(SUM_FILE)
+	$(info K: Running the program SUM using krun...)
+	@$(K_BIN)/krun --directory $(java_dir) $(SUM_FILE)
 
 
 # Proving SUM's correctness
@@ -95,19 +98,17 @@ run-sum-java: $(SUM_FILE) $(java_kompiled)
 
 SUM_SPEC:=$(SUM_DIR)/sum-spec.k
 
-verify-sum: verify-sum-haskell verify-sum-java
+verify-sum: verify-sum-java
 
-# Haskell Backend (NOTE: this does not work yet)
+# Haskell Backend (NOTE: not yet supported)
 
 verify-sum-haskell: $(SUM_SPEC) $(SUM_FILE) $(haskell_kompiled)
-	@echo $@: `date +%s`
 	$(K_BIN)/kprove --directory $(haskell_dir) $(SUM_SPEC) 
-	@echo $@: `date +%s`
 
 # Java  Backend
 
 verify-sum-java: $(SUM_SPEC) $(SUM_FILE) $(java_kompiled)
-	@echo $@: `date +%s`
-	$(K_BIN)/kprove --directory $(java_dir) $(SUM_SPEC) 
-	@echo $@: `date +%s`
+	$(info K: Verifying the correctness property of SUM using kprove...)
+	@time -p $(K_BIN)/kprove --directory $(java_dir) $(SUM_SPEC)
+
 
