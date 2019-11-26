@@ -39,6 +39,6 @@ make verify-sum
 
 ## Help and Feedback
 
-Feel free to report GitHub issues or to contact us at: 
+Feel free to report GitHub issues or to contact us at:
 [contact@runtimeverification.com](mailto:contact@runtimeverification.com).
 

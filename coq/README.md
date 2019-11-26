@@ -14,7 +14,7 @@ The specification files are as follows:
 
 ## Running the Example
 
-Assuming Coq has been downloaded and installed (see the 
+Assuming Coq has been downloaded and installed (see the
 [Coq documentation](https://coq.inria.fr/opam-using.html)), the specification may be compiled
 and run simply by issuing the command:
 
@@ -28,5 +28,5 @@ The command compiles the specification files and then runs the correctness proof
 
 ## Help and Feedback
 
-Feel free to report GitHub issues or to contact us at: 
+Feel free to report GitHub issues or to contact us at:
 [contact@runtimeverification.com](mailto:contact@runtimeverification.com).

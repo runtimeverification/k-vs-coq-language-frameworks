@@ -103,7 +103,7 @@ verify-sum: verify-sum-java
 # Haskell Backend (NOTE: not yet supported)
 
 verify-sum-haskell: $(SUM_SPEC) $(SUM_FILE) $(haskell_kompiled)
-	$(K_BIN)/kprove --directory $(haskell_dir) $(SUM_SPEC) 
+	$(K_BIN)/kprove --directory $(haskell_dir) $(SUM_SPEC)
 
 # Java  Backend
 
