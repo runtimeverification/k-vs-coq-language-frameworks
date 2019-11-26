@@ -1,4 +1,4 @@
-# k-vs-coq-language-frameworks
+# K vs. Coq Example
 
 This repository provides a simple verification example through which the [K framework](http://www.kframework.org) 
 and [Coq](https://coq.inria.fr) are compared as language specification and verification frameworks. This is a 
