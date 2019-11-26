@@ -49,5 +49,5 @@ See the individual sub-directories for further options for running these tasks.
 
 ## Help and Feedback
 
-Feel free to report GitHub issues or to contact us at: [contact@runtimeverification.com](contact@runtimeverification.com).
+Feel free to report GitHub issues or to contact us at: [contact@runtimeverification.com](mailto:contact@runtimeverification.com).
 
