@@ -20,10 +20,10 @@ semantics, the specification of the program SUM and the specification of the cor
 property to be verified, in each language framework. More details can be found in the
 individual subdirectories.
 
-## Pre-requisites
+## Prerequisites
 
 In order to compile and run the examples, you need to have both K and Coq properly installed in
-your system. Refer to [K's repository](https://github.com/kframework/k) and [Coq's documentation](https://coq.inria.fr/opam-using.html) for installation instructions.
+your system. Refer to the [K project repository](https://github.com/kframework/k) and [Coq's documentation](https://coq.inria.fr/opam-using.html) for installation instructions.
 
 Once installed, make sure that you update the Make file of the K specification located at
 `k/Makefile` so that `$K_HOME` is set to point to the directory where K is installed in
