@@ -1,6 +1,8 @@
 
 ## Verification Example in K
 
+The example gives a specification of the language IMP, the program SUM and the correctness property in the K framework. This example is based on the IMP example of the [K Tutorial](https://github.com/kframework/k/tree/master/k-distribution/tutorial).
+
 The specification files are as follows:
 
 - `imp.k`: The formal specification L of the syntax and semantics of IMP in K.
