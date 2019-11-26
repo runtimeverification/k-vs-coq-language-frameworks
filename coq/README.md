@@ -1,11 +1,13 @@
 
 ## Verification Example in Coq
 
+The example gives a specification of the language IMP, the program SUM and the correctness property in Coq. This example is an adaptation of the IMP example in [Program Verification by Coinduction](https://github.com/Formal-Systems-Laboratory/coinduction).
+
 The specification files are as follows:
 
 - `proof_system.v`: The main soundness theorem allowing the reachability logic proof strategy.
 - `imp.v`: The specification of IMP, SUM and the correctness property in Coq, along with the correctness proof.
-- `execution.v`: test executions as theorems.
+- `execution.v`: Test executions as theorems.
 
 ## Running the Example
 
