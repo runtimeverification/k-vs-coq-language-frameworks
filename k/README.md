@@ -1,6 +1,39 @@
 
-### IMP in K
+## Verification Example in K
 
-- `imp.k` the formal specification L of IMP in K
-- `sum/sum.imp` the program P
-- `sum/sum-spec.k` the specification S of the property
+The specification files are as follows:
+
+- `imp.k`: The formal specification L of the syntax and semantics of IMP in K.
+- `sum/sum.imp`: The program (specification) P of SUM.
+- `sum/sum-spec.k`: The specification S of the correctness property to be verified.
+
+## Running the Example
+
+First, assuming K is downloaded and compiled, modify the line beginning with `$K_HOME`
+in the make file `Makefile` so that `$K_HOME` is set to point to the home directory
+of K in your system.
+
+Then, you may build the K program tools for IMP using the command:
+
+```
+make build
+```
+
+Now, you can execute the program SUM using the command:
+
+```
+make run-sum
+```
+
+Or you may proceed to proving correctness of SUM against its specification using the command:
+
+```
+make verify-sum
+```
+
+`make clean` removes all binaries built during this process.
+
+## Help and Feedback
+
+Feel free to report GitHub issues or to contact us at: [contact@runtimeverification.com](mailto:contact@runtimeverification.com).
+
