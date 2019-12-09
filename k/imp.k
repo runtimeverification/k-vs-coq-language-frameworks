@@ -59,7 +59,17 @@ module IMP
     requires notBool (X in keys(Rho))
   rule int .Ids; S => S  [structural]
 
-// verification ids
+// verification example
   syntax Id ::= "n"     [token]
               | "sum"   [token]
+  syntax Pgm ::= "sum_pgm" Int [macro]
+  rule sum_pgm N => 
+    int n, sum;
+    n = N;
+    sum = 0;
+    while (!(n <= 0)) {
+      sum = sum + n;
+      n = n + (-1);
+    }
+
 endmodule
