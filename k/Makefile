@@ -77,7 +77,7 @@ $(java_kompiled): $(java_files)
 # Running SUM
 # -----------
 SUM_DIR:=sum
-SUM_FILE:=$(SUM_DIR)/sum100.imp
+SUM_FILE:=$(SUM_DIR)/sum.imp
 
 run-sum: run-sum-java
 
