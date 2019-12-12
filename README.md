@@ -3,7 +3,7 @@
 This repository provides a simple verification example through which the
 [K framework](http://www.kframework.org) and [Coq](https://coq.inria.fr) are compared as
 language specification and verification frameworks. This is a companion resource for the
-article/sequence of posts [TBA](#)
+article/sequence of posts published [hear](https://runtimeverification.com/blog/k-vs-coq-as-language-verification-frameworks-part-1-of-3/)
 
 In this example, we illustrate how the correctness property of computing the sum of numbers
 from 1 to N (with N a non-negative integer) is specified and verified in each framework for
