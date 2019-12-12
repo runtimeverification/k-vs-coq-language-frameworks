@@ -16,7 +16,7 @@ The specification files are as follows:
 First, assuming [K](https://github.com/kframework/k) is downloaded and compiled, modify the 
 line beginning with `K_HOME` in the make file `Makefile` so that `K_HOME` is set to point 
 to the home directory of K in your system. For example, if you downloaded K to `~/tools/k`, 
-update the line in `k/Makefile` that begins with `K_HOME` so that it reads:
+update the line in `Makefile` that begins with `K_HOME` so that it reads:
 
 ```
 K_HOME:=~/tools/k
