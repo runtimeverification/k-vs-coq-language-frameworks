@@ -19,7 +19,7 @@ to the home directory of K in your system. For example, if you downloaded K to `
 update the line in `k/Makefile` that begins with `$K_HOME` so that it reads:
 
 ```
-$K_HOME=~/tools/k
+$K_HOME:=~/tools/k
 ```
 
 Then, you may build the K program tools for IMP using the command:
