@@ -28,9 +28,13 @@ your system. Refer to the [K project repository](https://github.com/kframework/k
 [Coq's documentation](https://coq.inria.fr/opam-using.html) for installation instructions.
 
 Once installed, make sure that you update the Make file of the K specification located at
-`k/Makefile` so that `$K_HOME` is set to point to the directory where K is installed in
-your system. For example, if you downloaded K to `~/tools/k`, update the line
-in `k/Makefile` that begins with `$K_HOME` so that its value is exactly `~/tools/k`.
+`k/Makefile` so that `K_HOME` is set to point to the directory where K is installed in
+your system. For example, if you downloaded K to `~/tools/k`, 
+update the line in `k/Makefile` that begins with `K_HOME` so that it reads:
+
+```
+K_HOME:=~/tools/k
+```
 
 ## Running the Verification Tasks
 
