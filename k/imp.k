@@ -23,6 +23,7 @@ module IMP-SYNTAX
                  > Stmt Stmt                  [left]
   syntax Pgm ::= "int" Ids ";" Stmt
   syntax Ids ::= List{Id,","}
+  syntax Pgm ::= "sum_pgm" Int [macro]
 endmodule
 
 
@@ -62,7 +63,6 @@ module IMP
 // verification example
   syntax Id ::= "n"     [token]
               | "sum"   [token]
-  syntax Pgm ::= "sum_pgm" Int [macro]
   rule sum_pgm N => 
     int n, sum;
     n = N;
